@@ -1,7 +1,7 @@
 var runner, debris=[], debriswidth, debrisheight, runnerx, runnery, canvaswidth, canvasheight, timeout;
 function sizeset(){
-  canvaswidth=window.innerWidth; canvasheight=window.innerHeight; runnerwidth=Math.ceil(canvaswidth/27);
-  runnerheight=runnerwidth+10; debriswidth=debrisheight=Math.floor(canvaswidth/23);
+  canvaswidth=window.innerWidth; canvasheight=window.innerHeight; runnerwidth=Math.ceil(canvaswidth/30);
+  runnerheight=runnerwidth; debriswidth=debrisheight=Math.floor(canvaswidth/23);
 }
 window.addEventListener('resize', function(event){
   window.location.href=window.location.href;
@@ -9,7 +9,7 @@ window.addEventListener('resize', function(event){
 sizeset();
 function prestart(){
   
-  runner=new item(canvaswidth/2, canvasheight-runnerheight*1.85, runnerwidth, runnerheight, '#FF0033');
+  runner=new item(canvaswidth/2, canvasheight-runnerheight*2.25, runnerwidth, runnerheight, '#FF0033');
   matrix.start();
   
 }
@@ -97,9 +97,9 @@ function reset(){
    runner.position();
 }
 function borders(){
-  if((matrix.horiz && runner.x+runner.w/2+matrix.horiz>matrix.canvas.width) ||
+  if((matrix.horiz>0 && runner.x+runner.w/2+matrix.horiz>matrix.canvas.width) ||
     (matrix.horiz<0 && runner.x-runner.w/2+matrix.horiz<0)) matrix.horiz=0;
-  if((matrix.vert && runner.y+runner.h+matrix.vert>matrix.canvas.height) ||
+  if((matrix.vert>0 && runner.y+runner.h+matrix.vert>matrix.canvas.height) ||
     (matrix.vert<0 && runner.y+matrix.vert<0)) matrix.vert=0;
 }
 function stop(){
@@ -171,7 +171,7 @@ function cease(x){
   else if(x===1) matrix.vert=0;
   else if(x===2) matrix.vert=0;
 }
-document.getElementById('timer').addEventListener('click', function(){
+function pause(){
   if(matrix.pause){
     matrix.pause=false;
     debris.pop();
@@ -183,4 +183,4 @@ document.getElementById('timer').addEventListener('click', function(){
     debris.push(new item(0, 0, matrix.canvas.width, matrix.canvas.height, 'rgba(100,100,100,0.5)'));
     debris[debris.length-1].falls();
     return;
-})
+}
