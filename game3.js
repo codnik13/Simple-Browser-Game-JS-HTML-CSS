@@ -169,7 +169,7 @@ function cease(x){
   else if(x===1) matrix.vert=0;
   else if(x===2) matrix.vert=0;
 }
-document.getElementById('timer').addEventListener('click', function(){
+function pause(){
   if(matrix.pause){
     matrix.pause=false;
     debris.pop();
@@ -180,6 +180,5 @@ document.getElementById('timer').addEventListener('click', function(){
     matrix.pause=true;
     debris.push(new item(0, 0, matrix.canvas.width, matrix.canvas.height, 'rgba(100,100,100,0.5)'));
     debris[debris.length-1].falls();
-    timer.innerHTML='continue';
     return;
-})
+}
