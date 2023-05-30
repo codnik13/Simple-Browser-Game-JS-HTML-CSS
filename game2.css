@@ -18,7 +18,7 @@ button{
   background-color: transparent;
   border-radius: 100vw;
   text-align: center;
-  font-size: 3vw;
+  font-size: 5vw;
   font-weight: 900;
   min-width: 5vw;
 }
@@ -33,7 +33,7 @@ button:hover{
   min-width: 50vw;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: black;
   border-radius: 100vw;
