@@ -1,0 +1,35 @@
+body{
+	margin: 0;
+	background-color:  black;
+}
+canvas{
+	border:  1px solid cyan;
+	background-image: url('game.jpg');
+	background-size:  cover;
+	background-attachment:  fixed;
+}
+button{
+	border: 1px solid #0066FF;
+	font-variant: small-caps;
+	font-size: 2vw;
+	font-family:  Tahoma;
+	color: #CC0066;
+	margin: auto;
+	width:  11vw;
+	height:  3vw;
+	background-color: black;
+	display: block;
+}
+button:hover{
+	background-color: #CC0066;
+	color: black;
+}
+p{
+  color: white;
+  font-variant: small-caps;
+  font-size: 40px;
+  height: 100vh;
+  display:  flex;
+  align-items: center;
+  justify-content:  center;
+}

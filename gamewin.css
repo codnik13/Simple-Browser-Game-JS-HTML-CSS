@@ -1,0 +1,71 @@
+body{
+	margin: 0;
+}
+canvas{
+	background-image:  linear-gradient(#CCFF99, #FFCC99, #FFFF99);
+	position: relative;
+	index-z: 1;
+}
+p{
+	animation-name: inscript;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+	color: #FF6633;
+	font-size: 10vw;
+	font-variant:  small-caps;
+	index-z: 2;
+	position: absolute;
+	left: 20vw;
+	top: 35vh;
+	padding: 0;
+	text-align: center;
+	margin: 0;
+}
+@keyframes inscript{
+	0%{
+		color: #FF6633;
+	}
+	25%{
+		color: #FF3366;
+	}
+	50%{
+		color: #CC0099;
+	}
+	75%{
+		color: #FF0066;
+	}
+	100%{
+		color: #6699FF;
+	}
+}
+#more{
+	animation-name: spin;
+	animation-iterating-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-duration: 3s;
+}
+@keyframes spin{
+	0%{
+		color: #FF6633;
+		transform: rotateX(72deg) scale(0.2,0.2);
+	}
+	25%{
+		color: #FF3366;
+		transform: rotateX(144deg) scale(0.4,0.4);
+	}
+	50%{
+		color: #CC0099;
+		transform: rotateX(216deg) scale(0.6,0.6);
+	}
+	75%{
+		color: #FF0066;
+		transform: rotateX(288deg) scale(0.8,0.8);
+	}
+	100%{
+		color: #6699FF;
+		transform:  rotateX(360deg) scale(1,1);
+	}
+}

@@ -1,0 +1,57 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color:  black;
+	width: 100vw;
+	height: 100vh;;
+  }
+  canvas{
+	background-image: url('game.jpg');
+	background-size:  cover;
+	background-attachment:  fixed;
+  }
+  button{
+	font-size: 2vw;
+	color: #CC0066;
+	margin: auto;
+	display: block;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	border-radius: 100vw;
+  }
+  button:hover{
+	background-color: #CC0066;
+	color: black;
+  }
+  #button{
+	position: absolute;
+	bottom: 0;
+	left: 42vw;
+	width: 16vw;
+	height: 7vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	background-color: black;
+	border-radius: 100vw;
+  }
+  #timer{
+	margin: 0 1vw;
+	width: 2vw;
+	color: lime;
+  }
+  p{
+	color: white;
+	font-variant: small-caps;
+	font-size: 40px;
+	height: 100vh;
+	display:  flex;
+	align-items: center;
+	justify-content:  center;
+  }
+  .hide{
+	display: none;
+  }

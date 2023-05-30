@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='en-US' dir='ltr'>
+  <head>
+    <title> Game Win Page </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='icon' type='image/x-icon' href='logocolor.jpg'>
+    <link rel='stylesheet' href='gamewin.css'>
+  </head>
+  <body>
+    <canvas></canvas>
+    <p id='more'> you've won </p>
+  </body>
+  <script>
+    window.addEventListener('resize', function(){
+      window.location.href=window.location.href;
+    })
+    setTimeout(substitute, 3000);
+    function substitute(){
+      document.getElementById('more').remove();
+      var para=document.createElement('p');
+      para.innerHTML="you've won";
+      document.body.appendChild(para);
+    }
+    var canvas=document.getElementsByTagName('canvas')[0];
+    canvas.width=window.innerWidth; canvas.height=window.innerHeight;
+    var context=canvas.getContext('2d');
+    var w=canvas.width/15; var h=1.1*w;
+    var span=Math.floor((canvas.width)/5);
+    var interval=setInterval(reset, 50);
+    var count=0; var ballons=[]; var quant=-1; var vary; var color;
+    function reset(){
+      context.clearRect(0, 0, canvas.width, canvas.height);      
+      for(i=0; i<ballons.length; i++){
+        ballons[i].y--;
+        ballons[i].rise();
+      }
+      if(++quant%70==0) ballons.push(new item(rand(), color));
+    }
+    function rand(){
+      vary=Math.ceil(Math.random()*5);
+      if(vary==1) color='#99FF00';
+      else if(vary==2) color='#FFCC00';
+      else if(vary==3) color='#FF0033';
+      else if(vary==4) color='#6699CC';
+      else if(vary==5) color='#CC0066';
+      if(++count>5) count=1;
+      if(count==1) return span+span/2;
+      if(count==2) return 3*span+span/2;
+      if(count==3) return span/2;
+      if(count==4) return 4*span+span/2;
+      if(count==5) return 2*span+span/2;
+      vary=Math.ceil(Math.random()*5);
+    }
+    function item(x, color){
+      this.x=x; this.y=canvas.height; this.color=color;
+      this.rise=function(){
+       context.beginPath();
+       context.fillStyle=this.color;
+       context.moveTo(this.x, this.y);
+       context.bezierCurveTo(this.x+w/2,this.y, this.x+w/2,this.y-h, this.x,this.y-h);
+       context.moveTo(this.x, this.y);
+       context.bezierCurveTo(this.x-w/2,this.y, this.x-w/2,this.y-h, this.x,this.y-h);
+       context.moveTo(this.x,this.y);
+       context.lineTo(this.x-w/10, this.y+h/10); context.lineTo(this.x+w/10, this.y+h/10); 
+       context.closePath();
+       context.fill();
+       context.beginPath();
+       context.lineJoin='round';
+       context.strokeStyle='darkslategrey';
+       context.lineWidth='1.2';
+       context.moveTo(this.x, this.y+h/10); 
+       context.bezierCurveTo(this.x+w/20,this.y+h/10, this.x+w/20,this.y+h/20+h/10, this.x,this.y+h/20+h/10);
+       context.bezierCurveTo(this.x-w/20,this.y+h/20+h/10, this.x-w/20,this.y+h/10+h/10, this.x,this.y+h/10+h/10);
+       context.stroke();
+      }
+    }
+  </script>
+</html>
