@@ -12,30 +12,29 @@ canvas{
   background-attachment:  fixed;
 }
 button{
-  color: #CC0066;
+  color: lime;
+  z-index: 2;
   outline: none;
   border: none;
   background-color: transparent;
   border-radius: 100vw;
   text-align: center;
-  font-size: 5vw;
+  font-size: 3vw;
   font-weight: 900;
   min-width: 5vw;
-}
-button:hover{
-  background-color: #CC0066;
-  color: black;
+  opacity: 1;
 }
 #button{
   position: absolute;
   bottom: 0;
   left: 30vw;
-  min-width: 50vw;
+  min-width: 40vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background-color: black;
+  opacity: .7;
   border-radius: 100vw;
 }
 #timer{
@@ -45,7 +44,7 @@ button:hover{
 p{
   color: white;
   font-variant: small-caps;
-  font-size: 10vh;
+  font-size: 40px;
   height: 100vh;
   display:  flex;
   align-items: center;
