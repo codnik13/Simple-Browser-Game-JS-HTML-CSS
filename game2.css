@@ -12,14 +12,14 @@ canvas{
   background-attachment:  fixed;
 }
 button{
-  font-size: 2vw;
   color: #CC0066;
-  margin: auto;
-  display: block;
   outline: none;
   border: none;
   background-color: transparent;
   border-radius: 100vw;
+  text-align: center;
+  font-size: 2.7vw;
+  font-weight: 900;
 }
 button:hover{
   background-color: #CC0066;
@@ -28,9 +28,9 @@ button:hover{
 #button{
   position: absolute;
   bottom: 0;
-  left: 42vw;
-  width: 16vw;
-  height: 7vh;
+  left: 30vw;
+  width: 40vw;
+  height: 8vh;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -42,6 +42,7 @@ button:hover{
   margin: 0 1vw;
   width: 2vw;
   color: lime;
+  text-align: center;
 }
 p{
   color: white;
