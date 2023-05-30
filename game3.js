@@ -10,6 +10,7 @@ sizeset();
 function prestart(){
   runner=new item(canvaswidth/2, canvasheight-runnerheight*2.25, runnerwidth, runnerheight, '#FF0033');
   matrix.start();
+  
 }
 function game(){ 
   matrix.welcome();
@@ -95,9 +96,9 @@ function reset(){
    runner.position();
 }
 function borders(){
-  if((matrix.horiz && runner.x+runner.w/2+matrix.horiz>matrix.canvas.width) ||
+  if((matrix.horiz>0 && runner.x+runner.w/2+matrix.horiz>matrix.canvas.width) ||
     (matrix.horiz<0 && runner.x-runner.w/2+matrix.horiz<0)) matrix.horiz=0;
-  if((matrix.vert && runner.y+runner.h+matrix.vert>matrix.canvas.height) ||
+  if((matrix.vert>0 && runner.y+runner.h+matrix.vert>matrix.canvas.height) ||
     (matrix.vert<0 && runner.y+matrix.vert<0)) matrix.vert=0;
 }
 function stop(){
