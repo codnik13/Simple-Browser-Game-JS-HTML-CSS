@@ -1,14 +1,14 @@
 var runner, debris=[], debriswidth, debrisheight, runnerx, runnery, canvaswidth, canvasheight, timeout;
 function sizeset(){
   canvaswidth=window.innerWidth; canvasheight=window.innerHeight; runnerwidth=Math.ceil(canvaswidth/27);
-  runnerheight=runnerwidth+10; debriswidth=debrisheight=Math.floor(canvaswidth/23);
+  runnerheight=runnerwidth+5; debriswidth=debrisheight=Math.floor(canvaswidth/23);
 }
 window.addEventListener('resize', function(event){
   window.location.href=window.location.href;
 })
 sizeset();
 function prestart(){
-  runner=new item(canvaswidth/2, canvasheight-runnerheight*1.85, runnerwidth, runnerheight, '#FF0033');
+  runner=new item(canvaswidth/2, canvasheight-runnerheight*2.25, runnerwidth, runnerheight, '#FF0033');
   matrix.start();
 }
 function game(){ 
