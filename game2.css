@@ -20,6 +20,7 @@ button{
   text-align: center;
   font-size: 2.7vw;
   font-weight: 900;
+  min-width: 5vw;
 }
 button:hover{
   background-color: #CC0066;
@@ -29,8 +30,7 @@ button:hover{
   position: absolute;
   bottom: 0;
   left: 30vw;
-  width: 40vw;
-  height: 8vh;
+  min-width: 40vw;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -39,8 +39,6 @@ button:hover{
   border-radius: 100vw;
 }
 #timer{
-  margin: 0 1vw;
-  width: 2vw;
   color: lime;
   text-align: center;
 }
