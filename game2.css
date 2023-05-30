@@ -53,3 +53,13 @@ p{
 .hide{
   display: none;
 }
+@media only screen and (max-width: 600px){
+  #button{
+    min-width: 60vw;
+    left: 20vw;
+  }
+  button{
+    min-width: 7vw;
+    font-size: 7vw;
+  }
+}
