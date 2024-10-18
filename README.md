@@ -5,6 +5,5 @@ The game includes 3 levels that differ in the speed and intensity of moving obst
 
 You can play as shown below. To make the red triangle travel faster, push an arrow key twice
 
-
-https://github.com/user-attachments/assets/3a232183-ce0c-45ff-b89d-7a7cbbbd4e70
+https://github.com/user-attachments/assets/a5c03102-b78c-4760-9d05-a627e8994472
 
