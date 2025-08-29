@@ -1,2 +1,2 @@
-[Link to play](https://codexunter.github.io/Browser-Game/)
+[Link to play](https://codnik13.github.io/Browser-Game/)
 
