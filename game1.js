@@ -67,9 +67,9 @@ function rand(v){
   if(v==11) return Math.floor(Math.random()*piece)+5*piece;
 }
 function countdown(){
-  let t=Math.floor(((9000-matrix.count)/50-Math.floor((9000-matrix.count)/3000)*60));
-  matrix.timer.innerHTML=Math.floor((9000-matrix.count)/3000)+':'+(t<10 ? '0'+t : t);
-  if(matrix.count>=9000)
+  let t=Math.floor(((3000-matrix.count)/50-Math.floor((3000-matrix.count)/3000)*60));
+  matrix.timer.innerHTML=Math.floor((3000-matrix.count)/3000)+':'+(t<10 ? '0'+t : t);
+  if(matrix.count>=3000)
     window.location.href='game2.html';
 }
 function reset(){
